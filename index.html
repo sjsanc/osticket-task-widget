@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/2c7fa631b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700&display=swap" rel="stylesheet">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			  crossorigin="anonymous"></script>
+    <title>Task Widget</title>
+  </head>
+  <body>
+
+  <div id="container">
+
+    <div id="title-row">
+      <h1>Task Widget</h1>
+      <i class="fas fa-chart-bar"></i>
+    </div>
+
+    <div id="header-row">
+      <ul>
+        <li id="ticket-header">ticket</li>
+        <li id="task-header">task</li>
+        <li id="age-header">age</li>
+        <li id="action-header">actions</li>
+      </ul>
+    </div>
+
+    <div id="item-container">
+    <div class="item" id="item1">
+      <a href="#" class="ticketNo item-item">66905</a>
+      <p class="task-content">This is some sample text...uneditable, of course.</p>
+      <p class="task-age item-item">2hr</p>
+      <div class="btn-wrapper item-item">
+        <button class="btn-act delete"><i class="fas fa-times"></i>
+        <button class="btn-act complete"><i class="fas fa-check"></i>
+      </div>
+    </div>
+    </div>
+
+  <div action="" id="task-creation-form" name="create">
+
+    <div id="grab-ticket-box">
+      <button for="" id="grab-ticket-button" onclick="grabTicket()">Grab</button>
+      <input type="number" id="grab-ticket-input" placeholder="00000" onfocus="this.placeholder = ''" onblur="this.placeholder = '00000'"  maxlength="5"></input>
+    </div>
+
+    <div id="task-content-input">
+      <textarea id="input-textarea" placeholder="What do you need to remember?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'What do you need to remember?'" maxlength="300"></textarea>
+    </div>
+
+    <button id="submit-task" type="submit">SUBMIT</button>
+
+ </div>
+</div>
+
+<div id="stat-panel">
+  <h1>Tasks Completed:</h1>
+  <p>Today<span id="tasksTodayCount">0</span></p>
+  <p>This week<span id="tasksWeekCount">0</span></p>
+  <p>All time<span id="tasksAllCount">0</span></p>
+</div>
+
+
+<div id="sample-container">
+  <div id="sample-ticket">66904</div>
+</div>
+
+  <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
+
+<!-- <input name="somename"
+        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+        type = "number"
+        maxlength = "6"
+     /> USE THIS IN CASE YOU CANT FIX INPUT DATA VALIDATION -->
